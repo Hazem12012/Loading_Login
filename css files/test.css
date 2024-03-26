@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  color: #fff;
+}
+::selection {
+  color: blue;
+  background: rgba(0, 238, 255, 0.678);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #192f3a;
+}
+
+.container {
+  position: relative;
+  width: 256px;
+  height: 256px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-box {
+  position: absolute;
+  width: 400px;
+}
+
+.login-box form {
+  width: 100%;
+  padding: 0 50px;
+}
+.login-box h2 {
+  text-align: center;
+  color: #0ef;
+  font-size: 2em;
+  padding-bottom: 5px;
+}
+.login-box .input-box {
+  position: relative;
+  margin: 25px 0;
+}
+
+.login-box .input-box input {
+  outline: none;
+  border-radius: 40px;
+  border: solid 2px #2c4766;
+  background-color: transparent;
+  width: 100%;
+  height: 50px;
+  padding-left: 25px;
+  transition: 0.5s ease;
+}
+
+.login-box .input-box input:focus,
+.login-box .input-box input:valid {
+  border: #0ef solid 2px;
+}
+.login-box .input-box label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  font-size: 1em;
+  color: #fff;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: 1px;
+  font-size: 0.8em;
+  background-color: #192f3a;
+  padding: 0 4px;
+  color: #0ef;
+}
+
+.login-box .forgot-pass {
+  margin: -15px 0 10px;
+  text-align: center;
+}
+.forgot-pass a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85em;
+}
+.forgot-pass a:hover {
+  text-decoration: underline;
+}
+.btn {
+  width: 100%;
+  height: 45px;
+  background-color: #0ef;
+  border: transparent;
+  border-radius: 40px;
+  color: #2c4766;
+  cursor: pointer;
+}
+.signup-link {
+  text-align: center;
+  margin-top: 15px;
+}
+.signup-link a {
+  color: #0ef;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 800;
+}
+.signup-link a:hover {
+  text-decoration: underline;
+}
+.container span {
+  width: 32px;
+  height: 6px;
+  background-color: #2c4766;
+  position: absolute;
+  left: 0;
+  border-radius: 8px;
+  transform: scale(2.1) rotate(calc(var(--i) * 360deg / 50));
+  transform-origin: 128px;
+  animation-delay: calc(var(--i) * (3s / 50));
+}
+.clickAni {
+  animation: animationBlank 3s linear infinite;
+}
+
+@keyframes animationBlank {
+  0% {
+    background-color: #0ef;
+  }
+  25% {
+    background-color: #2c4766;
+  }
+}
